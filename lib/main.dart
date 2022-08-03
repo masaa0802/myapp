@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
                 // 縦幅
                 height: 50,
                 color: Colors.blue,
-                child: Text('200x50'),
+                child: Text('200x200'),
               ),
               Container(
                 // 内側の余白
