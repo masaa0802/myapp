@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         body: Column(
           children: <Widget>[
+            
             Container(
               width: double.infinity,
               height: 60,
@@ -79,9 +80,19 @@ class MyApp extends StatelessWidget {
                 ],
               ),
             ),
+            Container(
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: NetworkImage('https://placehold.jp/200x100.png'),
+                ),
+                ),
+                child: Text('image'),
+            ),
           ],
         ),
       ),
     );
   }
 }
+
+
