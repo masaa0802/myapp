@@ -23,6 +23,7 @@ class MyApp extends StatelessWidget {
                 ],
               ),
             ),
+
             Container(
               width: double.infinity,
               height: 70,
@@ -34,6 +35,7 @@ class MyApp extends StatelessWidget {
                 ],
               ),
             ),
+
             Container(
               width: double.infinity,
               height: 60,
@@ -46,6 +48,7 @@ class MyApp extends StatelessWidget {
                 ],
               ),
             ),
+
             Container(
               width: double.infinity,
               height: 60,
@@ -57,6 +60,7 @@ class MyApp extends StatelessWidget {
                 ],
               ),
             ),
+
             Container(
               width: double.infinity,
               height: 60,
@@ -69,6 +73,7 @@ class MyApp extends StatelessWidget {
                 ],
               ),
             ),
+
             Container(
               width: double.infinity,
               height: 60,
@@ -80,6 +85,7 @@ class MyApp extends StatelessWidget {
                 ],
               ),
             ),
+
             Container(
               decoration: BoxDecoration(
                 image: DecorationImage(
@@ -88,6 +94,79 @@ class MyApp extends StatelessWidget {
                 ),
                 child: Text('image'),
             ),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                ElevatedButton(
+                  onPressed: null,
+                  child: Text('disabled'),
+                ),
+                ElevatedButton(
+                  onPressed: () {},
+                  child: Text('enabled'),
+                ),
+                ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.red,
+                    elevation: 16,
+                  ),
+                  child: Text('enabled'),
+                ),
+              ],
+            ),
+            
+            Container(
+              padding: EdgeInsets.only(top: 32),
+              child: Text('IconButton'),
+            ),
+            
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                IconButton(
+                  onPressed: () {},
+                  icon: Icon(Icons.thumb_up),
+                ),
+                IconButton(
+                  color: Colors.pink,
+                  onPressed: () {},
+                  icon: Icon(Icons.favorite),
+                ),
+                IconButton(
+                  iconSize: 64,
+                  onPressed: () {},
+                  icon: Icon(Icons.flight),
+                ),
+              ],
+            ),
+
+            Container(
+              padding: EdgeInsets.only(top: 32),
+              child: Text('アイコン＋テキスト'),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                TextButton.icon(
+                  onPressed: () {},
+                  icon: Icon(Icons.thumb_up),
+                  label: Text('Good'),
+                ),
+                OutlinedButton.icon(
+                  onPressed: () {},
+                  icon: Icon(Icons.favorite, color: Colors.pink),
+                  label: Text('Like'),
+                ),
+                ElevatedButton.icon(
+                  onPressed: () {},
+                  icon: Icon(Icons.flight),
+                  label: Text('Flight'),
+                ),
+              ],
+            ),
+
           ],
         ),
       ),
