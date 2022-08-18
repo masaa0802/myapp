@@ -3,15 +3,60 @@ import 'package:flutter/material.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
+
+    final List<Map<String, dynamic>> listItems = [
+    {
+      'text': 'Item 1',
+      'color': Colors.blue[600],
+    },
+    {
+      'text': 'Item 2',
+      'color': Colors.blue[300],
+    },
+    {
+      'text': 'Item 3',
+      'color': Colors.blue[100],
+    },
+  ];
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(primarySwatch: Colors.blue),
       home: Scaffold(
+        floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.black,
+        onPressed: () {},
+        child: Icon(Icons.add),
+      ),
         body: Column(
           children: <Widget>[
-            
+           // タイトル・サブタイトル・画像・アイコン等を含めたアイテムが作れる
+            ListTile(
+              leading: Image.network('https://placehold.jp/50x50.png'),
+              title: Text('ListTile'),
+              subtitle: Text('subtitle'),
+              trailing: Icon(Icons.more_vert),
+            ),
+            // 影のついたカードUIが作れる
+            Card(
+              child: Container(
+                height: 60,
+                width: double.infinity,
+                child: Text('Card'),
+              ),
+            ),
+            // 組み合わせることもOK
+            Card(
+              child: ListTile(
+                leading: Image.network('https://placehold.jp/50x50.png'),
+                title: Text('Card and ListTile'),
+                subtitle: Text('subtitle'),
+                trailing: Icon(Icons.more_vert),
+              ),
+            ),
+
             Container(
               width: double.infinity,
               height: 60,
